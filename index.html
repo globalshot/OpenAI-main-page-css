@@ -13,7 +13,14 @@
     <nav class="navbar">
 
     </nav>
-
+    <div class="test">
+        <div class="fullscreen-video">
+            <video autoplay loop muted class="video">
+              <source src="video/video1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <button class="myBtn" onclick="myFunction()">Pause</button>
+    </div>
     <section class="main-container">
         <div class="learn-about-us">
             <ul class="learn-about-container">
@@ -241,6 +248,21 @@
         </div>
 
     </section>
+
+    <script>
+        var video = document.querySelector("video");
+        var btn = document.querySelector("myBtn");
+        
+        function myFunction() {
+          if (video.paused) {
+            video.play();
+            btn.innerHTML = "Pause";
+          } else {
+            video.pause();
+            btn.innerHTML = "Play";
+          }
+        }
+        </script>
 </body>
 
 </html>
