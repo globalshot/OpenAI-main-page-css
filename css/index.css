@@ -1,0 +1,143 @@
+/* global styling */
+* {
+    box-sizing: border-box;
+    color: #FFFFFF;
+}
+
+body {
+    background-color: #000000;
+    margin: 0;
+    margin-block-end: 20px;
+}
+
+hr {
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* sub global styling */
+
+
+.info-list {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.info-list>li{
+    flex-grow: 1;
+    width: 200px;/*you need image and do grow on it*/
+    /* background-color: red; */ /*remove after testing*/
+}
+
+.category-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.category-container>div{
+    width: 50%;
+}
+
+.img-to-screen{
+    width: 100%;
+}
+
+.img-in-list{
+    width: 100%;
+}
+
+/* more specific styling */
+
+.main-container {
+    display: grid;
+    grid-template-columns: 24px 1fr 24px;
+}
+
+.main-container>* {
+    grid-column: 2;
+}
+
+.main-container>.full {
+    grid-column: 1/-1;
+}
+
+.learn-about-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.learn-about-container>li {
+    padding-inline-end: 16px;
+}
+
+.updates-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.quote{
+    display: flex;
+    border-top: 1px solid gray;
+    /* remove h2 margin, add padding */
+}
+
+.quote>*{
+    width: 50%;
+}
+
+.careers-btn{
+    height: 88px;
+    border: 1px solid #FFFFFF;
+    background-color: #000000;
+    padding-block-start: 7px;
+    padding-block-end: 9px;
+}
+
+.careers-btn:hover{
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+.categories-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.categories-container>div{
+    width: 50%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100px;
+    margin-inline-start: 24px;
+}
+
+.categories-container>.logo{
+    flex-grow: 2;
+    flex-shrink: 2;
+    flex-basis: 212px;
+}
+
+.footer-container{
+    display: flex;
+}
+
+.terms-info{
+    width: 400px;
+}
+
+.social-links-container{
+display: flex;
+justify-content: space-between;
+flex-direction: column;
+}
+
+.social-links-list{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
