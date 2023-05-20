@@ -1,4 +1,13 @@
 /* global styling */
+:root{
+    --sans: system-ui, -apple-system, Helvetica Neue, Arial, sans-serif;
+    --circle: sans-serif;
+    --mono: Courier, monospace;
+    --serif: ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+}
+html {
+    scroll-behavior: smooth;
+  }
 * {
     box-sizing: border-box;
     color: #FFFFFF;
@@ -12,11 +21,35 @@ body {
 
 hr {
     width: 100%;
+    margin-block-start: 96px;
+    margin-block-end: 12px;
 }
 
 ul {
     list-style: none;
     padding: 0;
+}
+
+h2{
+    font-family: var(--serif);
+    margin: 0;
+    font-size: 48px;
+    font-weight: 400;
+}
+
+h4, p, span{
+    font-family: var(--sans);
+}
+
+span{
+    border-bottom: 1px solid white;
+    height: fit-content;
+    font-size: 18px;
+}
+
+span:hover{
+    border-bottom: 1px solid #A8A8A8;
+    cursor: pointer;
 }
 
 /* sub global styling */
@@ -26,12 +59,21 @@ ul {
     display: flex;
     flex-direction: row;
     gap: 24px;
+    height: 490px;
+    padding-block-start: 60px;
+}
+
+.info-list li:hover{
+    cursor: pointer;
+}
+
+.info-list li:hover h4{
+    text-decoration: underline;
 }
 
 .info-list>li{
     flex-grow: 1;
-    width: 200px;/*you need image and do grow on it*/
-    /* background-color: red; */ /*remove after testing*/
+    width: 200px;
 }
 
 .category-container{
@@ -43,8 +85,25 @@ ul {
     width: 50%;
 }
 
+.category-container div:nth-child(2){
+    padding-inline-start: 12px;
+}
+
+.category-container div h2{
+    letter-spacing: -0.96px;
+    line-height: 52.8px;
+}
+.category-container div p{
+    font-size: 28px;
+    margin: 0;
+    letter-spacing: -0.28px;
+    line-height: 33.6px;
+    margin-block-end: 24px;
+}
+
 .img-to-screen{
     width: 100%;
+    margin-block-start: 96px;
 }
 
 .img-in-list{
@@ -75,6 +134,16 @@ ul {
     padding-inline-end: 16px;
 }
 
+.learn-about-li h3{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.learn-about-li:hover span{
+    border-bottom: 1px solid #A8A8A8;
+    cursor: pointer;
+}
+
 .updates-container {
     display: flex;
     justify-content: space-between;
@@ -82,8 +151,35 @@ ul {
 
 .quote{
     display: flex;
-    border-top: 1px solid gray;
+    border-top: 1px solid rgba(255,255,255,.2);;
+    margin-block-start: 96px;
+    padding-block-start: 22px;
     /* remove h2 margin, add padding */
+}
+
+.quote div{
+    padding-inline-start: 24px;
+}
+
+.quote h2{
+    margin-block-start: -6px;
+    margin-block-end: 24px;
+    font-size: 55px;
+}
+
+.quote h2::before{
+    content: '“';
+    position: absolute;
+    left: 24px;
+}
+
+.quote h2::after{
+    content: '”';
+    position: absolute;
+}
+
+.quote h3,.quote h4{
+    margin: 0;
 }
 
 .quote>*{
@@ -94,13 +190,15 @@ ul {
     height: 88px;
     border: 1px solid #FFFFFF;
     background-color: #000000;
-    padding-block-start: 7px;
-    padding-block-end: 9px;
+    margin-block-start: 117px;
+    margin-block-end: 192px;
+    font-size: 28px;
 }
 
 .careers-btn:hover{
     color: #000000;
     background-color: #FFFFFF;
+    cursor: pointer;
 }
 
 .categories-container{
@@ -116,14 +214,41 @@ ul {
     margin-inline-start: 24px;
 }
 
+.categories-container div h4{
+    margin: 0;
+}
+.categories-container div ul{
+    margin: 0;
+}
+
 .categories-container>.logo{
     flex-grow: 2;
     flex-shrink: 2;
     flex-basis: 212px;
+    margin-inline-start: 0;
+}
+
+.categories-container div li{
+    font-size: 18px;
+    line-height: 23.4px;
 }
 
 .footer-container{
     display: flex;
+    border-top: 1px solid #FFFFFF;
+}
+
+.footer-container ul{
+    margin-block-end: 0;
+}
+
+.footer-container li{
+    font-size: 18px;
+    line-height: 23.4px;
+}
+
+.footer-container .copyright{
+    font-weight: 700;
 }
 
 .terms-info{
@@ -140,4 +265,17 @@ flex-direction: column;
     display: flex;
     flex-direction: row;
     gap: 24px;
+}
+
+.career-header h1{
+    font-size: 73px;
+    letter-spacing: -1.46px;
+    line-height: 80.3px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.back-to-top{
+    border: none;
+    width: fit-content;
 }
